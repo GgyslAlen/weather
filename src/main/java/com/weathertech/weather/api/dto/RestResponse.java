@@ -17,10 +17,10 @@ public class RestResponse {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String referenceId = null;
 
-    public static RestResponse ERROR_SERVICE_UNAVAILABLE = new RestResponse(500, "Service unavailable");
-    public static RestResponse ERROR_WRONG_PARAMETERS = new RestResponse(400, "Wrong parameters");
-    public static RestResponse ERROR_NOT_FOUND = new RestResponse(404, "Not found");
-    public static RestResponse ERROR_FORBIDDEN = new RestResponse(403, "Not allowed");
+    public static final RestResponse ERROR_SERVICE_UNAVAILABLE = new RestResponse(500, "Service unavailable");
+    public static final RestResponse ERROR_WRONG_PARAMETERS = new RestResponse(400, "Wrong parameters");
+    public static final RestResponse ERROR_NOT_FOUND = new RestResponse(404, "Not found");
+    public static final RestResponse ERROR_FORBIDDEN = new RestResponse(403, "Not allowed");
     public static final RestResponse OK = new RestResponse(0, "ok");
 
     public RestResponse(int errorCode, String errorMessage, String provider, String iconFileName, JsonElement parse) {
