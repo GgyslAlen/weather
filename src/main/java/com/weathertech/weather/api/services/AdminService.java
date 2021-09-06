@@ -16,23 +16,27 @@ import static com.weathertech.weather.api.models.mapping.SqlMappings.GET_SUB_DET
 @Service
 public class AdminService {
 
-    @Autowired
     private UserRepo userRepo;
 
-    @Autowired
     private SubscriptionRepo subscriptionRepo;
 
-    @Autowired
     private CityRepo cityRepo;
 
-    @Autowired
     private ActualWeatherRepo actualWeatherRepo;
 
-    @Autowired
     private DatabaseClient databaseClient;
 
-    @Autowired
     private RoleRepo roleRepo;
+
+    @Autowired
+    public AdminService(UserRepo userRepo, SubscriptionRepo subscriptionRepo, CityRepo cityRepo, ActualWeatherRepo actualWeatherRepo, DatabaseClient databaseClient, RoleRepo roleRepo) {
+        this.userRepo = userRepo;
+        this.subscriptionRepo = subscriptionRepo;
+        this.cityRepo = cityRepo;
+        this.actualWeatherRepo = actualWeatherRepo;
+        this.databaseClient = databaseClient;
+        this.roleRepo = roleRepo;
+    }
 
     public Mono<RestResponse> userList() {
         return userRepo.findAll().collectList().flatMap(it -> Mono.just(new RestResponse(it)));

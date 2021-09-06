@@ -17,26 +17,30 @@ import static com.weathertech.weather.api.models.mapping.SqlMappings.WEATHER_MAP
 @Service
 public class ApiService {
 
-    @Autowired
     private UserRepo userRepo;
 
-    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @Autowired
     private RoleRepo roleRepo;
 
-    @Autowired
     private CityRepo cityRepo;
 
-    @Autowired
     private SecurityUtil securityUtil;
 
-    @Autowired
     private SubscriptionRepo subscriptionRepo;
 
-    @Autowired
     private DatabaseClient databaseClient;
+
+    @Autowired
+    public ApiService(UserRepo userRepo, BCryptPasswordEncoder bCryptPasswordEncoder, RoleRepo roleRepo, CityRepo cityRepo, SecurityUtil securityUtil, SubscriptionRepo subscriptionRepo, DatabaseClient databaseClient) {
+        this.userRepo = userRepo;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.roleRepo = roleRepo;
+        this.cityRepo = cityRepo;
+        this.securityUtil = securityUtil;
+        this.subscriptionRepo = subscriptionRepo;
+        this.databaseClient = databaseClient;
+    }
 
     public Mono<RestResponse> login(String username, String password) {
         return securityUtil.loadUserByLogin(username)

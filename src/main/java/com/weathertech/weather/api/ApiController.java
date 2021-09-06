@@ -24,8 +24,12 @@ public class ApiController {
 
     private static final Logger log = LoggerFactory.getLogger(ApiController.class);
 
-    @Autowired
     private ApiService apiService;
+
+    @Autowired
+    public ApiController(ApiService apiService) {
+        this.apiService = apiService;
+    }
 
     //Authorization method. Returns JWT token
     @RequestMapping(value = "/login", method = RequestMethod.POST)

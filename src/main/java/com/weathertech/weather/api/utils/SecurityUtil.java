@@ -27,14 +27,18 @@ public class SecurityUtil {
 
     private final Logger log = LoggerFactory.getLogger(SecurityUtil.class);
 
-    @Autowired
     private UserRepo userRepo;
 
-    @Autowired
     private RoleRepo roleRepo;
 
-    @Autowired
     private DatabaseClient databaseClient;
+
+    @Autowired
+    public SecurityUtil(UserRepo userRepo, RoleRepo roleRepo, DatabaseClient databaseClient) {
+        this.userRepo = userRepo;
+        this.roleRepo = roleRepo;
+        this.databaseClient = databaseClient;
+    }
 
     public Mono<User> loadUserByLogin(String login) {
         return userRepo.findByLogin(databaseClient, USER_MAPPING, login);

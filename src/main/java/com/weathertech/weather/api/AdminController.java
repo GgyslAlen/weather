@@ -27,12 +27,15 @@ import static com.weathertech.weather.api.utils.Utils.*;
 @RequestMapping(value = "/admin")
 public class AdminController {
 
-    @Autowired
     private AdminService adminService;
 
-    @Autowired
     private ApiService apiService;
 
+    @Autowired
+    public AdminController(AdminService adminService, ApiService apiService) {
+        this.adminService = adminService;
+        this.apiService = apiService;
+    }
 
     //Method to get all users
     @RequestMapping(value = "/user-list", method = RequestMethod.GET)
