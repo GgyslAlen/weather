@@ -1,4 +1,4 @@
-package com.weathertech.weather.api.security.dto;
+package com.weathertech.weather.api.security;
 
 import com.weathertech.weather.api.security.AuthenticationManager;
 import org.springframework.http.HttpHeaders;

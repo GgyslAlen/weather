@@ -1,7 +1,6 @@
 package com.weathertech.weather.api.security;
 
 import com.weathertech.weather.api.models.Role;
-import com.weathertech.weather.api.security.dto.SecurityContextRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
