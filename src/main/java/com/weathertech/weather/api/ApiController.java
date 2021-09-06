@@ -53,7 +53,7 @@ public class ApiController {
         return createResponse(apiService.login(username, password));
     }
 
-    //Registration mothed. Returns JWT token in response
+    //Registration method. Returns JWT token in response
     /**  */
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public Mono<ResponseEntity<RestResponse>> register(
