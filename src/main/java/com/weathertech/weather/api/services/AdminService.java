@@ -31,9 +31,6 @@ import static com.weathertech.weather.api.utils.Utils.createResponse;
 public class AdminService {
 
     @Autowired
-    private SecurityUtil securityUtil;
-
-    @Autowired
     private UserRepo userRepo;
 
     @Autowired

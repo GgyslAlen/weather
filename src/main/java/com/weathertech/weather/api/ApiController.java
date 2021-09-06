@@ -41,9 +41,6 @@ public class ApiController {
     @Autowired
     private ApiService apiService;
 
-    @Autowired
-    private SecurityUtil securityUtil;
-
     //Authorization method. Returns JWT token
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Mono<ResponseEntity<RestResponse>> login(
