@@ -1,33 +1,18 @@
 package com.weathertech.weather.api.services;
 
-import com.google.gson.Gson;
 import com.weathertech.weather.api.dto.RestResponse;
-import com.weathertech.weather.api.dto.SubscriptionDetails;
-import com.weathertech.weather.api.dto.WeatherReply;
 import com.weathertech.weather.api.exceptions.RestException;
 import com.weathertech.weather.api.models.*;
 import com.weathertech.weather.api.repo.*;
-import com.weathertech.weather.api.security.TokenInfoDto;
 import com.weathertech.weather.api.utils.SecurityUtil;
-import io.r2dbc.spi.Row;
-import io.r2dbc.spi.RowMetadata;
-import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.r2dbc.core.DatabaseClient;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.math.BigDecimal;
 import java.security.Principal;
-import java.util.Date;
-import java.util.Optional;
-import java.util.function.BiFunction;
-import java.util.stream.Collectors;
-
 import static com.weathertech.weather.api.models.mapping.SqlMappings.WEATHER_MAPPING;
-import static com.weathertech.weather.api.utils.Utils.createResponse;
 
 @Service
 public class ApiService {

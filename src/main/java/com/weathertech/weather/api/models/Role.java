@@ -1,12 +1,9 @@
 package com.weathertech.weather.api.models;
 
-import com.fasterxml.jackson.annotation.JsonRawValue;
-import org.hibernate.annotations.Type;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
-
-import javax.persistence.*;
 
 @Table("roles")
 public class Role {

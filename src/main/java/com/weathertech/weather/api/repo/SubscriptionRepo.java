@@ -3,18 +3,13 @@ package com.weathertech.weather.api.repo;
 import com.weathertech.weather.api.dto.SubscriptionDetails;
 import com.weathertech.weather.api.dto.WeatherReply;
 import com.weathertech.weather.api.models.Subscription;
-import com.weathertech.weather.api.models.SubscriptionId;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
-import org.springframework.data.r2dbc.repository.Query;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.r2dbc.core.DatabaseClient;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
 import java.util.function.BiFunction;
 
 @Repository

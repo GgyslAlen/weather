@@ -1,31 +1,17 @@
 package com.weathertech.weather.api.services;
 
 import com.weathertech.weather.api.dto.RestResponse;
-import com.weathertech.weather.api.dto.SubscriptionDetails;
 import com.weathertech.weather.api.exceptions.RestException;
 import com.weathertech.weather.api.models.ActualWeather;
 import com.weathertech.weather.api.models.City;
-import com.weathertech.weather.api.models.User;
 import com.weathertech.weather.api.repo.*;
-import com.weathertech.weather.api.utils.SecurityUtil;
-import io.r2dbc.spi.Row;
-import io.r2dbc.spi.RowMetadata;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.r2dbc.core.DatabaseClient;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
 import java.math.BigDecimal;
-import java.security.Principal;
-import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-import java.util.function.BiFunction;
 
 import static com.weathertech.weather.api.models.mapping.SqlMappings.GET_SUB_DET_MAPPING;
-import static com.weathertech.weather.api.utils.Utils.createResponse;
 
 @Service
 public class AdminService {

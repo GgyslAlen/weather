@@ -19,8 +19,6 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.math.BigDecimal;
-import java.security.Principal;
-import java.util.List;
 import java.util.Map;
 
 import static com.weathertech.weather.api.utils.Utils.*;

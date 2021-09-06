@@ -1,7 +1,6 @@
 package com.weathertech.weather.api.repo;
 
 import com.weathertech.weather.api.models.Role;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Mono;

@@ -1,6 +1,5 @@
 package com.weathertech.weather.api.utils;
 
-import com.weathertech.weather.api.models.Role;
 import com.weathertech.weather.api.models.User;
 import com.weathertech.weather.api.repo.RoleRepo;
 import com.weathertech.weather.api.repo.UserRepo;
@@ -16,9 +15,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;

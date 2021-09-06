@@ -1,34 +1,20 @@
 package com.weathertech.weather.api;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import com.weathertech.weather.api.dto.RestResponse;
 import com.weathertech.weather.api.exceptions.RestException;
-import com.weathertech.weather.api.models.City;
-import com.weathertech.weather.api.models.User;
-import com.weathertech.weather.api.security.TokenInfoDto;
 import com.weathertech.weather.api.services.ApiService;
-import com.weathertech.weather.api.utils.SecurityUtil;
 import com.weathertech.weather.api.utils.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ServerWebExchange;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.security.Principal;
-import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 import static com.weathertech.weather.api.utils.Utils.*;
 

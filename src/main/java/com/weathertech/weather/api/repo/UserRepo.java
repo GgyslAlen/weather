@@ -1,15 +1,11 @@
 package com.weathertech.weather.api.repo;
 
-import com.weathertech.weather.api.dto.WeatherReply;
 import com.weathertech.weather.api.models.User;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.r2dbc.core.DatabaseClient;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

@@ -2,7 +2,6 @@ package com.weathertech.weather.api.models;
 
 import org.springframework.data.relational.core.mapping.Column;
 
-import javax.persistence.Embeddable;
 import java.io.Serializable;
 
 public class SubscriptionId implements Serializable {
